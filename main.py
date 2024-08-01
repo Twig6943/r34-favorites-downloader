@@ -82,7 +82,11 @@ for page in pages:
 
 print(f'\nFound images: {", ".join(all_found_ids)}\n')
 
-for post_id in all_found_ids:
+total_posts = len(all_found_ids)
+
+for index, post_id in enumerate(all_found_ids, start=1):
+    print(f'Downloading post {index} of {total_posts}...')
+
     driver.get(f"https://rule34.xxx/index.php?page=post&s=view&id={post_id}")  # load page
 
     sleep(1)
