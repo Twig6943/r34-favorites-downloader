@@ -24,3 +24,4 @@ I literally tweaked some stuff to get with ChatGPT (Useragent stuff) to get it w
 
 Resources I've used while adding new features:
 https://www.reddit.com/r/selenium/comments/p44sie/dns_settings_with_geckodriver/
+https://stackoverflow.com/questions/54754945/how-to-install-extension-permanently-in-geckodriver
