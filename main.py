@@ -1,10 +1,10 @@
 #Made by owosu
-#Version 1.00
+#Version 1.01
+#Working version -- no experimental stuff
+
 import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.firefox.service import Service
 from webdriver_manager.firefox import GeckoDriverManager
 from os import system, path
 from time import sleep, time_ns
@@ -21,28 +21,7 @@ user_id = input('Profile ID: ')
 print('\nEnter the page numbers you want to download, separated by commas (e.g., 1,2,3):')
 pages = input('Pages: ').split(',')
 
-# Set up Firefox options to use Cloudflare DNS and enable extensions
-options = Options()
-options.set_preference("network.trr.mode", 2)  # Enable DoH
-options.set_preference("network.trr.uri", "https://cloudflare-dns.com/dns-query")  # Set Cloudflare DoH URI
-options.set_preference("network.trr.bootstrapAddress", "1.1.1.1")  # Use Cloudflare DNS for initial lookup
-options.set_preference("network.dns.disablePrefetch", True)  # Disable DNS prefetching
-
-# Enable loading of extensions
-options.set_preference("extensions.autoDisableScopes", 0)
-options.set_preference("extensions.enabledScopes", 15)
-
-# Path to uBlock Origin XPI (alternatively, download and store locally)
-ublock_origin_url = "https://addons.mozilla.org/firefox/downloads/file/4070280/ublock_origin-1.50.0.xpi"
-ublock_origin_path = os.path.join(pathlib.Path().resolve(), "ublock_origin.xpi")
-if not os.path.exists(ublock_origin_path):
-    response = requests.get(ublock_origin_url)
-    with open(ublock_origin_path, 'wb') as file:
-        file.write(response.content)
-
-# Initialize the WebDriver with uBlock Origin loaded
-driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=options)
-driver.install_addon(ublock_origin_path, temporary=True)
+driver = webdriver.Firefox()
 
 download_folder = f'./r34download_{time_ns()}'
 pathlib.Path(download_folder).mkdir(parents=True, exist_ok=True)  # create download folder
@@ -84,11 +63,7 @@ for page in pages:
 
 print(f'\nFound images: {", ".join(all_found_ids)}\n')
 
-total_posts = len(all_found_ids)
-
-for index, post_id in enumerate(all_found_ids, start=1):
-    print(f'Downloading post {index} of {total_posts}...')
-
+for post_id in all_found_ids:
     driver.get(f"https://rule34.xxx/index.php?page=post&s=view&id={post_id}")  # load page
 
     sleep(1)
