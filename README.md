@@ -19,4 +19,4 @@ Also very easy to modify to fit your own needs.
 - Can download multiple pages at once
 - Allows extensions (Only use ublock origin tho otherwise it might break) 
 
-I literally tweaked some stuff to get it working again and added some features using ChatGPT. Please don't credit me for this in any way. I just used chatgpt like a bitch to get it working. I was going to contact the original developer but his socials seem dead. Most of the code in this repo is written by @owosu . This repo will be taken down if I manage to contact @owosu somehow.
+I literally tweaked some stuff to get it working again and added some features using ChatGPT. Please don't credit me for this in any way. I just used ChatGPT like a bitch to get it working. I was going to contact the original developer but his socials seem dead. Most of the code in this repo is written by @owosu . This repo will be taken down if I manage to contact @owosu somehow.
