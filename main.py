@@ -1,5 +1,5 @@
-#Made by owosu
-#Version 1.01
+#Version 1.69
+#OG project made by owosu
 #Working version -- no experimental stuff
 
 import selenium
@@ -26,9 +26,18 @@ driver = webdriver.Firefox()
 download_folder = f'./r34download_{time_ns()}'
 pathlib.Path(download_folder).mkdir(parents=True, exist_ok=True)  # create download folder
 
+#Useragent stuff
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 }
+
+#DNS stuff ()
+from selenium.webdriver import Firefox
+from selenium.webdriver.firefox.options import Options
+options = Options()
+options.set_preference('network.trr.mode', 2)
+options.set_preference('network.trr.uri', 'https://mozilla.cloudflare-dns.com/dns-query')
+driver = Firefox(options=options)
 
 num_errors = 0
 all_found_ids = []
