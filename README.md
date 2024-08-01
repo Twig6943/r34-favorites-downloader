@@ -22,7 +22,7 @@ Also very easy to modify to fit your own needs.
 - Uses Cloudflare to accsess the site (work-in-progress) (use a VPN or your OS's DNS for now.)
 - Ublock origin (work-in-progress) (Still trying to figure out how firefox profiles work without relying on a OS specific directory) (Might just make it so that it asks the user where their firefox profile is located at) 
 
-I literally just tweaked some stuff using ChatGPT. (Da Useragent stuff and what not) Please don't credit me for this in any way. I've used ChatGPT like a bitch just like I usually do. I was going to contact the original developer but his socials seem dead. Most of the code in this repo is written by @owosu . This repo will be taken down if I manage to contact @owosu somehow.
+I literally just tweaked some stuff using ChatGPT. (Da Useragent stuff and what not) Please don't credit me for this in any way. I've used ChatGPT like a bitch just like I usually do. I was going to contact the original developer but his socials seem dead. Most of the code in this repo is written by @owosus . This repo will be taken down if I manage to contact @owosus somehow.
 
 Resources I've used:
 
