@@ -1,5 +1,7 @@
 # r34-favorites-downloader
 
+![placeholder](https://github.com/Twig6943/r34-favorites-downloader/blob/main/r34favdl.png?raw=true) 
+
 Extremely simple python script, that can download any users favorites from rule34.xxx
 Also very easy to modify to fit your own needs.
 
