@@ -1,4 +1,4 @@
-#Made by owosu
+#Made by owosus
 #Version 1.01
 #Working version -- no experimental stuff
 
