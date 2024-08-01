@@ -17,7 +17,7 @@ Also very easy to modify to fit your own needs.
 
 ### Extra features of this fork
 - Can download multiple pages at once
-- Works (at least on my machine :D ) (It used to not work without the useragent stuff. At least on my machine) 
+- Works (at least on my machine :D ) (It used to not work without the useragent stuff. That might not be the case for everybody tho) 
   ### Work-in-progress features of this fork // Not implemented 
 - Uses Cloudflare to accsess the site (work-in-progress) (use a VPN or your OS's DNS for now.)
 - Ublock origin (work-in-progress) (Still trying to figure out how firefox profiles work without relying on a OS specific directory) (Might just make it so that it asks the user where their firefox profile is located at) 
