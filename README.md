@@ -24,6 +24,6 @@ Also very easy to modify to fit your own needs.
 
 I literally just tweaked some stuff using ChatGPT. (Da Useragent stuff and what not) Please don't credit me for this in any way. I've used ChatGPT like a bitch just like I usually do. I was going to contact the original developer but his socials seem dead. Most of the code in this repo is written by @owosus . This repo will be taken down if I manage to contact @owosus somehow.
 
-Resources I've used for the n:
+Resources I've used:
 
 https://stackoverflow.com/questions/54271599/how-to-change-user-agent-for-firefox-webdriver-in-python
