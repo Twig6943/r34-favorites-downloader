@@ -1,8 +1,7 @@
 #Original project made by owosus
 #Forked by Twig (please don't credit me)
-#Version 1.01
+#Version 1.02
 #Working version -- no experimental stuff
-
 import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -81,9 +80,12 @@ for post_id in all_found_ids:
         img_element = driver.find_element(By.ID, "image")  # find image link
         image_link = img_element.get_attribute('src')
 
+        # Extract file name without query parameters
+        image_filename = image_link.split('/')[-1].split('?')[0]
+
         response = requests.get(image_link, headers=headers)
         if response.status_code == 200:
-            with open(os.path.join(download_folder, image_link.split('/')[-1]), 'wb') as file:
+            with open(os.path.join(download_folder, image_filename), 'wb') as file:
                 file.write(response.content)
             print(f'Downloaded {image_link}')
         else:
@@ -95,9 +97,12 @@ for post_id in all_found_ids:
             vidsrc_elem = driver.find_element(By.XPATH, '/html/body/div[5]/div/div[2]/div[1]/div[2]/div[1]/div[3]/div/video/source')  # locate video source element
             video_link = vidsrc_elem.get_attribute('src')
 
+            # Extract file name without query parameters
+            video_filename = video_link.split('/')[-1].split('?')[0]
+
             response = requests.get(video_link, headers=headers)
             if response.status_code == 200:
-                with open(os.path.join(download_folder, video_link.split('/')[-1]), 'wb') as file:
+                with open(os.path.join(download_folder, video_filename), 'wb') as file:
                     file.write(response.content)
                 print(f'Downloaded {video_link}')
             else:
@@ -110,3 +115,4 @@ for post_id in all_found_ids:
 driver.quit()
 print(f'Finished with {num_errors} errors (Check output for more info).')
 input()  # pause
+
