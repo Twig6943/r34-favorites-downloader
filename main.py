@@ -1,4 +1,5 @@
-#Made by owosus
+#Original project made by owosus
+#Forked by Twig (please don't credit me)
 #Version 1.01
 #Working version -- no experimental stuff
 
